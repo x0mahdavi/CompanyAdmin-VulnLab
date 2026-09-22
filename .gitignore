@@ -1,0 +1,21 @@
+# Environment
+.env
+.env.*
+
+# Dependencies
+/vendor/
+
+# Logs
+*.log
+/logs/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PHP
+.phpunit.result.cache
