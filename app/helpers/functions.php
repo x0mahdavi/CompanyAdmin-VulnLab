@@ -8,7 +8,10 @@ function loadEnv(string $path): void
         throw new RuntimeException('.env file not found.');
     }
 
-    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    $lines = file(
+        $path,
+        FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES
+    );
 
     foreach ($lines as $line) {
         $line = trim($line);
@@ -30,4 +33,13 @@ function loadEnv(string $path): void
             putenv($key . '=' . $value);
         }
     }
+}
+
+function e(string $value): string
+{
+    return htmlspecialchars(
+        $value,
+        ENT_QUOTES | ENT_SUBSTITUTE,
+        'UTF-8'
+    );
 }

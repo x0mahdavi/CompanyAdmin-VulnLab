@@ -1,0 +1,105 @@
+:root {
+    --lab-bg: #0b1120;
+    --lab-surface: #111827;
+    --lab-surface-2: #172033;
+    --lab-border: #263247;
+    --lab-blue: #3b82f6;
+    --lab-blue-dark: #2563eb;
+    --lab-text: #e5e7eb;
+    --lab-muted: #94a3b8;
+}
+
+body {
+    background: var(--lab-bg);
+    color: var(--lab-text);
+    min-height: 100vh;
+}
+
+.navbar {
+    background: rgba(11, 17, 32, 0.92);
+    border-bottom: 1px solid var(--lab-border);
+    backdrop-filter: blur(10px);
+}
+
+.brand-mark {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lab-blue);
+    border-radius: 9px;
+    color: #fff;
+}
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.22),
+            rgba(17, 24, 39, 0.9)
+        );
+    border: 1px solid var(--lab-border);
+    border-radius: 18px;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.text-muted-custom {
+    color: var(--lab-muted);
+}
+
+.stage-card {
+    height: 100%;
+    background: var(--lab-surface);
+    border: 1px solid var(--lab-border);
+    border-radius: 16px;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.stage-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--lab-blue);
+}
+
+.stage-card.locked {
+    opacity: 0.58;
+}
+
+.stage-number {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: var(--lab-surface-2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--lab-blue);
+}
+
+.progress {
+    height: 8px;
+    background: var(--lab-surface-2);
+}
+
+.progress-bar {
+    background: var(--lab-blue);
+}
+
+.badge-difficulty {
+    background: var(--lab-surface-2);
+    color: var(--lab-muted);
+    border: 1px solid var(--lab-border);
+}
+
+footer {
+    border-top: 1px solid var(--lab-border);
+    color: var(--lab-muted);
+}

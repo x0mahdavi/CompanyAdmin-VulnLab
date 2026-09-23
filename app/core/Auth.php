@@ -20,6 +20,33 @@ class Auth
         $_SESSION['user_id'] = $userId;
     }
 
+    public static function loginLabUser(PDO $db): void
+    {
+        self::startSession();
+
+        if (self::check()) {
+            return;
+        }
+
+        $stmt = $db->prepare(
+            'SELECT id FROM users
+             WHERE username = :username
+             LIMIT 1'
+        );
+
+        $stmt->execute([
+            'username' => 'trainee',
+        ]);
+
+        $userId = $stmt->fetchColumn();
+
+        if ($userId === false) {
+            throw new RuntimeException('Lab user not found.');
+        }
+
+        self::login((int) $userId);
+    }
+
     public static function logout(): void
     {
         self::startSession();
