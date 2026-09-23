@@ -160,3 +160,54 @@ INSERT INTO flags
 SELECT id, SHA2('FLAG-STAGE10-DEVELOPMENT', 256)
 FROM stages
 WHERE stage_number = 10;
+
+
+-- ============================================
+-- Stage 01 - Employees
+-- ============================================
+
+INSERT INTO stage01_employees
+    (employee_code, full_name, department, email, job_title)
+VALUES
+    (
+        'EMP-1001',
+        'Alice Morgan',
+        'Finance',
+        'alice.morgan@companyadmin.local',
+        'Financial Analyst'
+    ),
+    (
+        'EMP-1002',
+        'Daniel Carter',
+        'Engineering',
+        'daniel.carter@companyadmin.local',
+        'Senior Software Engineer'
+    ),
+    (
+        'EMP-1003',
+        'Sophia Bennett',
+        'Human Resources',
+        'sophia.bennett@companyadmin.local',
+        'HR Manager'
+    ),
+    (
+        'EMP-1004',
+        'Michael Brooks',
+        'Security',
+        'michael.brooks@companyadmin.local',
+        'Security Analyst'
+    ),
+    (
+        'EMP-1005',
+        'Emma Wilson',
+        'Operations',
+        'emma.wilson@companyadmin.local',
+        'Operations Coordinator'
+    ),
+    (
+        'EMP-1006',
+        'James Anderson',
+        'Engineering',
+        'james.anderson@companyadmin.local',
+        'Backend Developer'
+    );

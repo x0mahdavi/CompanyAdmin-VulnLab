@@ -78,3 +78,19 @@ CREATE TABLE flags (
 ) ENGINE=InnoDB
   DEFAULT CHARSET=utf8mb4
   COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================
+-- Stage 01 - Employees
+-- ============================================
+
+CREATE TABLE stage01_employees (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    employee_code VARCHAR(20) NOT NULL UNIQUE,
+    full_name VARCHAR(100) NOT NULL,
+    department VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    job_title VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8mb4
+  COLLATE=utf8mb4_unicode_ci;
